@@ -1,0 +1,26 @@
+from math import *
+from collections import Counter
+import functools
+#import numpy as np
+#import matplotlib.pyplot as plt
+#import pandas as pd 
+if __name__=='__main__':
+    t=int(input())
+    a=[]
+    while t!=0:
+        s=input().split()
+        if s[0]=='insert':
+            a.insert(int(s[1]),int(s[2]))
+        elif s[0]=='print':
+            print(a)
+        elif s[0]=='remove':
+            a.remove(int(s[1]))
+        elif s[0]=='append':
+            a.append(int(s[1]))
+        elif s[0]=='sort':
+            a.sort()
+        elif s[0]=='pop':
+            a.pop()
+        else:
+            a=a[::-1]
+        t-=1
